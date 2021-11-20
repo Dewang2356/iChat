@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#262d31">
+	<title>iChat</title>
+	<link rel="stylesheet" href="/chat.css">
+ 
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+</head>
+<body>
+
+    <div class="preloader">
+       <div class="sk-circle">
+  <div class="sk-circle1 sk-child"></div>
+  <div class="sk-circle2 sk-child"></div>
+  <div class="sk-circle3 sk-child"></div>
+  <div class="sk-circle4 sk-child"></div>
+  <div class="sk-circle5 sk-child"></div>
+  <div class="sk-circle6 sk-child"></div>
+  <div class="sk-circle7 sk-child"></div>
+  <div class="sk-circle8 sk-child"></div>
+  <div class="sk-circle9 sk-child"></div>
+  <div class="sk-circle10 sk-child"></div>
+  <div class="sk-circle11 sk-child"></div>
+  <div class="sk-circle12 sk-child"></div>
+</div>
+    </div>
+	<div class="container">
+       <div class="online-users">
+        <h2>Online Users</h2>
+         <ul class="userOnlineList">
+           
+         </ul>
+       </div>
+    <section class="chat__section">
+      <div class="brand">
+       <div class="head">
+            <img src="/logo.png" alt="" class="logo">
+            <h1>iChat</h1>
+       </div>
+            <div class="user">
+          <button class="toggle"><svg class="svg-inline--fa fa-user fa-w-14" aria-hidden="true" focusable="false" data-prefix="fa" data-icon="user" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" data-fa-i2svg=""><path fill="currentColor" d="M224 256c70.7 0 128-57.3 128-128S294.7 0 224 0 96 57.3 96 128s57.3 128 128 128zm89.6 32h-16.7c-22.2 10.2-46.9 16-72.9 16s-50.6-5.8-72.9-16h-16.7C60.2 288 0 348.2 0 422.4V464c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48v-41.6c0-74.2-60.2-134.4-134.4-134.4z"></path></svg></button>
+              <ul class="userOnlineList test">
+                 </ul>
+            </div>
+        </div>
+        <div class="message__area">
+           
+        </div>
+        <div class="image">
+          
+        </div>
+       <audio id="audio" src="notification.mp3" style="display: none;"></audio>
+ <div class="typingArea">
+        
+      
+        <textarea name="" id="textarea" cols="30" rows="1" class="input" placeholder="Type a Message..."></textarea>
+              
+            <button class="send">   <svg class="svg-inline--fa fa-paper-plane fa-w-16 fa-1x" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="paper-plane" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg=""><path fill="currentColor" d="M476 3.2L12.5 270.6c-18.1 10.4-15.8 35.6 2.2 43.2L121 358.4l287.3-253.2c5.5-4.9 13.3 2.6 8.6 8.3L176 407v80.5c0 23.6 28.5 32.9 42.5 15.8L282 426l124.6 52.2c14.2 6 30.4-2.9 33-18.2l72-432C515 7.8 493.3-6.8 476 3.2z"></path></svg></button>
+   
+        </div>
+    </section>
+   </div>
+  <script src="/socket.io/socket.io.min.js"></script>
+  <script src="chat.js"></script>
+</body>
+</html>
