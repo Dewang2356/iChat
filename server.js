@@ -16,18 +16,14 @@ io.on('connection', (socket) => {
         socket.join(room)
 
         if (!error) {socket.broadcast.to(room).emit('notification', { title: `${name} joined the chat` })}
-        // io.in(room).emit('notification', { title: `${name} joined the chat` })
         io.in(room).emit('users', getUsers(room))
-        
-        
-        // callback()
+      
     })
 
     socket.on('sendMessage', message => {
         const user = getUser(socket.id)
         socket.broadcast.to(user.room).emit('message', message);
         socket.broadcast.to(user.room).emit('typing', {name:"",val:""});
-        // socket.broadcast.(user.room).emit('message', { user: user.name, text: message });
     })
 
     socket.on("disconnect", () => {
@@ -41,8 +37,7 @@ io.on('connection', (socket) => {
     socket.on("typing",(name,room,val)=>{
            
         socket.broadcast.to(room).emit('typing', {name:name,val:val});
-        // socket.broadcast.to(room).emit('over', "");
-        // console.log(val);
+
 
     })
 })
